@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React,{useState} from 'react'
+import Document from './Document';
+import Typeform from './Typeform';
+import GetStarted from './GetStarted'
 function App() {
+  
+  const [start, setStart] = useState(false)
+  
+  const getStarted = () => {
+    setStart(true)
+  }
+  
+  if (start ===false) {
+    return(
+      <GetStarted onStart={getStarted}/>
+    )
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+         <h1 style={{textAlign:"center", padding:"10px"}}>Transitions Survey</h1>
+        <div className="App" >
+          <div className="ui grid" style={{height:"100%"}}>
+            <div className="eight wide column" >
+                <div className="ui raised segment" style={{height:"100%"}}>
+                  <Typeform style={{height:"100%"}}/>
+                </div>
+            </div>
+            <div className="eight wide column">
+              <div className="ui raised segment" style={{height:"100%"}}>
+                <Document />
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
+   
   );
 }
 

@@ -2,10 +2,26 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#doc {
+  height:600px;
 }
+
+#getstarted{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  margin-right:20%;
+  margin-left: 20%;
+  margin-top: 5%;
+  padding: 30px;
+  text-align: center;
+}
+#getstartedvid {
+  margin: 20px;
+  align-self: center;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -20,6 +36,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
